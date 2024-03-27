@@ -1,0 +1,4 @@
+*.img
+env/
+img/
+result.txt

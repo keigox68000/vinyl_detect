@@ -32,3 +32,4 @@ def analyze_images_in_folder(folder_path):
 if __name__ == '__main__':
     folder_path = 'img'
     analyze_images_in_folder(folder_path)
+
