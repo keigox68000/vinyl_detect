@@ -1,10 +1,15 @@
 import discogs_client
 import requests
 import os
+import configparser
+
+# 設定ファイルからアクセストークンを読み込む
+config = configparser.ConfigParser()
+config.read('setting.ini')
+ACCESS_TOKEN = config['discogs']['access_token']
 
 # Discogsクライアントの設定
 USER_AGENT = 'ExampleApplication/0.1'
-ACCESS_TOKEN = 'UUYXPIkYajiPYzaZnFHzIBztMBRrpVQabGEcOGOC'
 d = discogs_client.Client(USER_AGENT, user_token=ACCESS_TOKEN)
 
 def search_album_and_save_art(keyword):
@@ -52,3 +57,4 @@ with open('result.txt', 'r') as file:
             search_album_and_save_art(keyword)
         else:
             print(f"Invalid line format: {line}")
+            
