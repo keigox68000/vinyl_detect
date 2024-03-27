@@ -1,7 +1,6 @@
-*.img
-env/
-img/
-result.txt
 *.jpg
 *.json
+result.txt
 setting.ini
+env/
+img/
